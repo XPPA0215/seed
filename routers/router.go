@@ -12,7 +12,8 @@ func InitWebRouter() *gin.Engine {
 	{
 		userGroup := Api.Group("/user")
 		{
-			userGroup.GET("/a", user.A)
+			// 用户注册
+			userGroup.GET("/register", user.Register)
 		}
 	}
 	return router
